@@ -1,0 +1,125 @@
+
+    <app-header></app-header>
+    <body class="indextwo">
+  <div class="main-wrapper headertwo">
+    <div class="content">
+    <div class="container">
+    <div class="row">
+    <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
+    
+    <div class="profile-sidebar">
+    <div class="widget-profile pro-widget-content">
+    <div class="profile-info-widget">
+    <a href="#" class="booking-pro-img">
+    <img src="assets/img/instructors/instructor-thumb-01.jpg" alt="User Image">
+    </a>
+    <div class="profile-det-info">
+    <h3>David Lee</h3>
+    <div class="customer-details">
+    <h5 class="mb-0">Aerospace Engineering</h5>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="dashboard-widget">
+    <nav class="dashboard-menu">
+    <ul>
+    <li>
+    <a href="instructor-dashboard.html">
+    <i class="fas fa-columns"></i>
+    <span>Dashboard</span>
+    </a>
+    </li>
+    <li>
+    <a href="appointments.html">
+    <i class="fas fa-calendar-check"></i>
+    <span>Bandes</span>
+    </a>
+    </li>
+    <li class="active">
+    <a href="my-student.html">
+    <i class="fas fa-user-injured"></i>
+    <span>Armoires</span>
+    </a>
+    </li>
+
+    <li>
+    <a href="instructor-profile-settings.html">
+    <i class="fas fa-user-cog"></i>
+    <span>Profile Settings</span>
+    </a>
+    </li>
+    <li>
+    <a href="social-media.html">
+    <i class="fas fa-share-alt"></i>
+    <span>Social Media</span>
+    </a>
+    </li>
+    <li>
+    <a href="instructor-change-password.html">
+    <i class="fas fa-lock"></i>
+    <span>Change Password</span>
+    </a>
+    </li>
+    <li>
+    <a href="index.html">
+    <i class="fas fa-sign-out-alt"></i>
+    <span>Logout</span>
+    </a>
+    </li>
+    </ul>
+    </nav>
+    </div>
+    </div>
+    
+    </div>
+    <div class="col-md-7 col-lg-8 col-xl-9">
+    <div class="row row-grid">
+
+
+        <div class="col-md-6 col-lg-4" *ngFor="let bande of bandes">
+          <div class="card widget-profile pat-widget-profile">
+            <div class="card-body">
+              <div class="pro-widget-content">
+                <div class="profile-info-widget">
+                  <a [routerLink]="['/bande', bande.id]" class="booking-pro-img">
+                    <img src="assets/img/bandesauv.jpeg" alt="Bande Image">
+                  </a>
+                  <div class="profile-det-info">
+                    <h3>Label :<a [routerLink]="['/bande', bande.id]">{{ bande.label }}</a></h3>
+                    <div class="customer-details">
+                      <h5><b>ID Bande :</b> {{ bande.numBande }}</h5>
+                      <h5 class="mb-0"><i class="fas fa-calendar-alt"></i> De {{ bande.debut | date }} à {{ bande.fin | date }}</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="customer-info">
+                <ul>
+                  <li>Description <span>{{ bande.description }}</span></li>
+                  <li>Numéro de Casier <span>{{ bande.numCasier }}</span></li>
+                 <!-- <li>Armoire <span>{{ bande.armoire. || 'Non spécifiée' }}</span></li>-->
+                </ul>
+                <div class="table-action">
+                   
+                    <a> <button (click)="openEditDialog(bande.id)"mat-button class="btn btn-sm bg-info-light">Modifier</button>
+                    </a>
+
+                   <a> <button (click)="deleteBande(bande.id)" class="btn btn-sm bg-danger-light">Supprimer</button>
+                    
+                </a> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+ 
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+    <app-footer></app-footer>

@@ -1,0 +1,32 @@
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.card-title {
+  margin-bottom: 16px;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.text-danger {
+  font-size: 0.875rem;
+}
+
+.form-actions {
+  margin-top: 16px;
+}
+
+.btn-block {
+  width: 100%;
+}

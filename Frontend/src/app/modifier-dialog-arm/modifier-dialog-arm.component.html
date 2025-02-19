@@ -1,0 +1,54 @@
+<h1 mat-dialog-title>Modifier l'Armoire</h1>
+<div mat-dialog-content>
+  <form [formGroup]="armoireForm" (ngSubmit)="onSubmit()" class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>Nom <span class="text-danger">*</span></label>
+            <input type="text" formControlName="nomArmoire" class="form-control" placeholder="Nom de l'armoire" />
+            <div *ngIf="armoireForm.controls['nomArmoire'].invalid && armoireForm.controls['nomArmoire'].touched" class="text-danger">
+              Le nom est requis.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group form-focus">
+            <label>Emplacement <span class="text-danger">*</span></label>
+            <select formControlName="emplacement" class="form-control">
+              <option value="" disabled>Choisissez l'emplacement</option>
+              <option value="Chargia">Chargia</option>
+              <option value="el_Fejja">El Fejja</option>
+            </select>
+            <div *ngIf="armoireForm.controls['emplacement'].invalid && armoireForm.controls['emplacement'].touched" class="text-danger">
+              L'emplacement est requis.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>État</label>
+            <input type="checkbox" formControlName="etat" />
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="form-group">
+            <label>Description <span class="text-danger">*</span></label>
+            <textarea formControlName="description" class="form-control" rows="5" placeholder="Description"></textarea>
+            <div *ngIf="armoireForm.controls['description'].invalid && armoireForm.controls['description'].touched" class="text-danger">
+              La description est requise.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block" [disabled]="armoireForm.invalid">Modifier Armoire</button>
+    </div>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Annuler</button>
+</div>

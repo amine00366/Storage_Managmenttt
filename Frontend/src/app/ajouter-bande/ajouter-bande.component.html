@@ -1,0 +1,281 @@
+<app-header></app-header>
+<body class="indextwo">
+  <div class="main-wrapper headertwo">
+    
+    <div class="content">
+    <div class="container">
+    <div class="row">
+    
+    <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
+    <div class="profile-sidebar">
+    <div class="widget-profile pro-widget-content">
+    <div class="profile-info-widget">
+    <a href="#" class="booking-pro-img">
+    <img src="assets/img/student/student.jpg" alt="User Image">
+    </a>
+    <div class="profile-det-info">
+    <h3>Richard Wilson</h3>
+    <div class="customer-details">
+    <h5><i class="fas fa-birthday-cake"></i> 24 Jul 1983, 38 years</h5>
+    <h5 class="mb-0"><i class="fas fa-map-marker-alt"></i> Newyork, USA</h5>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="dashboard-widget">
+    <nav class="dashboard-menu">
+    <ul>
+    <li>
+    <a href="#">
+    <i class="fas fa-columns"></i>
+    <span>Dashboard</span>
+    </a>
+    </li>
+    <li>
+    <a href="favourites.html">
+    <i class="fas fa-bookmark"></i>
+    <span>Favourites</span>
+    </a>
+    </li>
+    <li>
+    <a href="chat.html">
+    <i class="fas fa-comments"></i>
+    <span>Message</span>
+    <small class="unread-msg">23</small>
+    </a>
+    </li>
+    <li class="active">
+    <a href="profile-settings.html">
+    <i class="fas fa-user-cog"></i>
+    <span>Profile Settings</span>
+    </a>
+    </li>
+    <li>
+    <a href="change-password.html">
+    <i class="fas fa-lock"></i>
+    <span>Change Password</span>
+    </a>
+    </li>
+    <li>
+    <a href="index.html">
+    <i class="fas fa-sign-out-alt"></i>
+    <span>Logout</span>
+    </a>
+    </li>
+    </ul>
+    </nav>
+    </div>
+    </div>
+    </div>
+    
+    <div class="col-md-7 col-lg-8 col-xl-9">
+    <div class="card">
+    <div class="card-body">
+        <!-- <form (ngSubmit)="ajouterBande()">
+            <div class="form-group">
+              <label for="numBande">Numéro de Bande</label>
+              <input type="text" id="numBande" [(ngModel)]="bande.numBande" name="numBande" class="form-control" required>
+            </div>
+        
+            <div class="form-group">
+              <label for="label">Label</label>
+              <input type="text" id="label" [(ngModel)]="bande.label" name="label" class="form-control" required>
+            </div>
+        
+            <div class="form-group">
+              <label for="debut">Début</label>
+              <input type="date" id="debut" [(ngModel)]="bande.debut" name="debut" class="form-control" required>
+            </div>
+        
+            <div class="form-group">
+              <label for="fin">Fin</label>
+              <input type="date" id="fin" [(ngModel)]="bande.fin" name="fin" class="form-control" required>
+            </div>
+        
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea id="description" [(ngModel)]="bande.description" name="description" class="form-control"></textarea>
+            </div>
+        
+            <div class="form-group">
+              <label for="numCasier">Numéro de Casier</label>
+              <input type="number" id="numCasier" [(ngModel)]="bande.numCasier" name="numCasier" class="form-control" required>
+            </div>
+        
+      
+        
+            <label for="armoire">Sélectionnez une armoire</label>
+            <select id="armoire" [(ngModel)]="selectedArmoireId" name="armoire" required>
+              <option *ngFor="let armoire of armoires" [value]="armoire.id">{{ armoire.nomArmoire }}</option>
+            </select>
+
+            <button type="submit" class="btn btn-primary">Ajouter Bande</button>
+          </form> -->
+    
+    <!-- <form>
+    <div class="row form-row">
+    <div class="col-12 col-md-12">
+    <div class="form-group">
+    <div class="change-avatar">
+
+ 
+    </div>
+    </div>
+    </div>
+    <div class="col-12 col-md-6">
+    <div class="form-group">
+    <label>Nom</label>
+    <input type="text" class="form-control" value="Richard">
+    </div>
+    </div>
+    <div class="col-12 col-md-6">
+    <div class="form-group">
+    <label>Label</label>
+    <input type="text" class="form-control" value="Wilson">
+    </div>
+    </div>
+    <div class="col-12 col-md-6">
+    <div class="form-group">
+    <label>Date debut</label>
+    <div class="cal-icon">
+    <input type="text" class="form-control datetimepicker" value="24-07-1983">
+    </div>
+    </div>
+    </div>
+    <div class="col-12 col-md-6">
+        <div class="form-group">
+            <label>Date fin</label>
+            <div class="cal-icon">
+            <input type="text" class="form-control datetimepicker" value="24-07-1983">
+            </div>
+            </div>
+    </div>
+   
+    <div class="col-12 col-md-6">
+    <div class="form-group">
+    <label>Numero Casier</label>
+    <input type="number" value="+1 202-555-0125" class="form-control">
+    </div>
+    </div>
+    <div class="col-12 col-md-6">
+        <div class="form-group form-focus">
+            <select class="form-control floating" required>
+              <option value="" disabled selected>Choisissez Armoire</option>
+              <option value="admin">El Chargia</option>
+              <option value="utilisateur">El Fejja</option>
+            </select>
+          </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+        <label>Description <span class="text-danger">*</span></label>
+        <textarea id="description" name="description"  class="form-control" rows="10" placeholder="Description"></textarea>
+    </div>
+  
+    <div class="col-12 col-md-6">
+    
+    </div>
+    <div class="col-12 col-md-6">
+   
+    </div>
+    <div class="col-12 col-md-6">
+  
+    </div>
+    </div>
+    <div class="submit-section">
+    <button type="submit" class="btn btn-primary submit-btn">Save Changes</button>
+    </div>
+    </form>
+     -->
+
+     <form (ngSubmit)="ajouterBande()">
+        <div class="row form-row">
+          <div class="col-12 col-md-12">
+            <div class="form-group">
+              <div class="change-avatar">
+                <!-- Tu peux ajouter ici un champ pour l'avatar si nécessaire -->
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-12 col-md-6">
+            <div class="form-group">
+              <label>Nom</label>
+              <input type="text" class="form-control" [(ngModel)]="bande.numBande" name="numBande" required />
+            </div>
+          </div>
+      
+          <div class="col-12 col-md-6">
+            <div class="form-group">
+              <label>Label</label>
+              <input type="text" class="form-control" [(ngModel)]="bande.label" name="label" required />
+            </div>
+          </div>
+      
+          <div class="col-12 col-md-6">
+            <div class="form-group">
+              <label>Date début</label>
+              <div class="cal-icon">
+                <input type="date" class="form-control" [(ngModel)]="bande.debut" name="debut" required />
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-12 col-md-6">
+            <div class="form-group">
+              <label>Date fin</label>
+              <div class="cal-icon">
+                <input type="date" class="form-control" [(ngModel)]="bande.fin" name="fin" required />
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-12 col-md-6">
+            <div class="form-group">
+              <label>Numéro Casier</label>
+              <input type="number" class="form-control" [(ngModel)]="bande.numCasier" name="numCasier" required />
+            </div>
+          </div>
+      
+          <div class="col-12 col-md-6">
+            <div class="form-group form-focus">
+              <label>Choisissez Armoire</label>
+              <select class="form-control" [(ngModel)]="selectedArmoireId" name="armoire" required>
+                <option value="" disabled selected>Choisissez Armoire</option>
+                <option *ngFor="let armoire of armoires" [value]="armoire.id">{{ armoire.nomArmoire }}</option>
+              </select>
+            </div>
+          </div>
+      
+          <div class="col-12">
+            <div class="form-group">
+              <label>Description <span class="text-danger">*</span></label>
+              <textarea
+                id="description"
+                name="description"
+                class="form-control"
+                rows="6"
+                [(ngModel)]="bande.description"
+                placeholder="Description"
+                required
+              ></textarea>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <!-- Optionally, add other fields here if needed -->
+          </div>
+        </div>
+      
+        <div class="submit-section">
+          <button type="submit" class="btn btn-primary submit-btn">Enregistrer</button>
+        </div>
+      </form>
+      
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    <app-footer></app-footer>

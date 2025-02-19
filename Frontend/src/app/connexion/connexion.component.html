@@ -1,0 +1,174 @@
+ <app-header></app-header>
+<body class="indextwo">
+    <div class="main-wrapper headertwo">
+<div class="main-wrapper">
+
+
+
+    
+
+    
+    
+    <div class="content">
+    <div class="container">
+    <div class="row">
+    <div class="col-lg-8 col-md-12">
+    
+    <div class="blog">
+        <div class="casier-table">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Casier</th>
+                  <th>Nombre de Bandes</th>
+                  <th>Capacité Restante</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let casier of armoireDetails?.casiersDetails | keyvalue">
+                  <td>{{ casier.key }}</td>
+                  <td>{{ casier.value.nombreBandes }}</td>
+                  <td>{{ casier.value.capaciteRestante }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+    <h3 class="blog-title"><a href="blog-details.html">– L'armoire {{armoireDetails.armoire.nomArmoire}} </a></h3>
+   
+    <div class="blog-content">
+<p>
+    "L'armoire est constituée de 6 casiers, chaque casier ayant la capacité de supporter jusqu'à 100 bandes, pour un total maximal de 600 bandes dans l'armoire. Le nombre total de bandes utilisées dans cette armoire est de {{ 600 - armoireDetails.totalBandesUtilisees}}, ce qui laisse une capacité restante de {{ armoireDetails.totalBandesUtilisees}} bandes . cette armoire est {{armoireDetails.armoire.etat ? 'disponible' : 'non disponible' }}
+    </div>
+    </div>
+    
+    
+   
+    
+   
+    
+    
+   
+    
+    
+ 
+    
+    </div>
+    
+    <div class="col-lg-4 col-md-12 sidebar-right theiaStickySidebar">
+    
+    <div class="card search-widget">
+    <div class="card-body">
+    <form class="search-form">
+    <div class="input-group">
+    <input type="text" placeholder="Search..." class="form-control">
+    <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+    </div>
+    </form>
+    </div>
+    </div>
+    
+    
+    <div class="card post-widget">
+        <div class="card-header">
+          <h4 class="card-title">Bandes de l'Armoire</h4>
+        </div>
+        <div class="card-body">
+          <ul class="latest-posts">
+            <li *ngFor="let bande of armoireDetails.armoire.bandes">
+              <div class="post-thumb">
+                <a href="band-details.html"> <!-- Vous pouvez mettre à jour le lien selon vos besoins -->
+                  <img class="img-fluid" src="assets/img/bandesauv.jpeg" alt="Bande Image"> <!-- Assurez-vous que les images existent -->
+                </a>
+              </div>
+              <div class="post-info">
+                <h4>
+                  <a href="band-details.html">{{ bande.label }}</a>
+                </h4>
+                <p>{{ bande.debut | date: 'd MMM yyyy' }} - {{ bande.fin | date: 'd MMM yyyy' }}</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+    
+    
+    <div class="card category-widget">
+    <div class="card-header">
+    <h4 class="card-title">capacité de casier</h4>
+    </div>
+    <div class="card-body">
+    <ul class="categories" *ngFor="let casier of armoireDetails?.casiersDetails | keyvalue">
+    <li><a href="#">casier numero {{ casier.key }} <span> ({{ casier.value.nombreBandes }})</span></a></li>
+    
+    </ul>
+    </div>
+    </div>
+    
+    
+    <div class="card tags-widget">
+    <div class="card-header">
+    <h4 class="card-title">Tags</h4>
+    </div>
+    <div class="card-body">
+    <ul class="tags">
+    <li><a href="#" class="tag">Books</a></li>
+    <li><a href="#" class="tag">Student</a></li>
+    <li><a href="#" class="tag">Appointment</a></li>
+    <li><a href="#" class="tag">Booking</a></li>
+    <li><a href="#" class="tag">Lecturer</a></li>
+    <li><a href="#" class="tag">Health</a></li>
+    <li><a href="#" class="tag">Management</a></li>
+    <li><a href="#" class="tag">Tips</a></li>
+    <li><a href="#" class="tag">Shedule</a></li>
+    <li><a href="#" class="tag">Treatment</a></li>
+    <li><a href="#" class="tag">College</a></li>
+    <li><a href="#" class="tag">Engineer</a></li>
+    <li><a href="#" class="tag">Online</a></li>
+    <li><a href="#" class="tag">Library</a></li>
+    <li><a href="#" class="tag">Consulting</a></li>
+    <li><a href="#" class="tag">Instructors</a></li>
+    <li><a href="#" class="tag">Courses</a></li>
+    <li><a href="#" class="tag">Class</a></li>
+    <li><a href="#" class="tag">Learning</a></li>
+    <li><a href="#" class="tag">DreamsCLG</a></li>
+    </ul>
+    </div>
+    </div>
+    
+    </div>
+    
+    </div>
+    </div>
+    </div>
+    
+    
+  
+    
+    </div>
+
+    <app-footer></app-footer> 
+
+    <!-- <div *ngIf="armoireDetails">
+        <h1>{{ armoireDetails.armoire.nomArmoire }}</h1>
+        <p>Description: {{ armoireDetails.armoire.description }}</p>
+        <p>Date de création: {{ armoireDetails.armoire.dateCreation | date }}</p>
+        <p>État: {{ armoireDetails.armoire.etat ? 'Actif' : 'Inactif' }}</p>
+        <p>Nombre total de bandes utilisées: {{ armoireDetails.totalBandesUtilisees }}</p>
+      
+        <h2>Bandes par casier</h2>
+        <ul>
+          <li *ngFor="let casier of armoireDetails.casiersDetails | keyvalue">
+            Casier {{ casier.key }}:
+            <ul>
+              <li>Nombre de bandes: {{ casier.value.nombreBandes }}</li>
+              <li>Capacité restante: {{ casier.value.capaciteRestante }}</li>
+              <li *ngFor="let bande of casier.value.bandes">
+                Bande ID: {{ bande.id }}, Numéro: {{ bande.numBande }}, Label: {{ bande.label }}
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+       -->

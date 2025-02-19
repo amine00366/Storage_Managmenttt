@@ -1,0 +1,87 @@
+<form [formGroup]="updateForm" (ngSubmit)="onSubmit()" class="card">
+  <div class="card-body">
+    <h4 class="card-title">Modifier la Bande</h4>
+    
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Nom <span class="text-danger">*</span></label>
+          <input type="text" formControlName="numBande" class="form-control" placeholder="Nom de la bande" />
+          <div *ngIf="updateForm.controls['numBande'].invalid && updateForm.controls['numBande'].touched" class="text-danger">
+            Le nom est requis.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Label <span class="text-danger">*</span></label>
+          <input type="text" formControlName="label" class="form-control" placeholder="Label de la bande" />
+          <div *ngIf="updateForm.controls['label'].invalid && updateForm.controls['label'].touched" class="text-danger">
+            Le label est requis.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Date début <span class="text-danger">*</span></label>
+          <input type="date" formControlName="debut" class="form-control" />
+          <div *ngIf="updateForm.controls['debut'].invalid && updateForm.controls['debut'].touched" class="text-danger">
+            La date de début est requise.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Date fin <span class="text-danger">*</span></label>
+          <input type="date" formControlName="fin" class="form-control" />
+          <div *ngIf="updateForm.controls['fin'].invalid && updateForm.controls['fin'].touched" class="text-danger">
+            La date de fin est requise.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Numéro Casier <span class="text-danger">*</span></label>
+          <input type="number" formControlName="numCasier" class="form-control" />
+          <div *ngIf="updateForm.controls['numCasier'].invalid && updateForm.controls['numCasier'].touched" class="text-danger">
+            Le numéro de casier est requis.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Choisissez Armoire <span class="text-danger">*</span></label>
+          <select formControlName="armoireId" class="form-control">
+            <option value="" disabled>Choisissez Armoire</option>
+            <option *ngFor="let armoire of armoires" [value]="armoire.id">
+              {{ armoire.nomArmoire }}
+            </option>
+          </select>
+          <div *ngIf="updateForm.controls['armoireId'].invalid && updateForm.controls['armoireId'].touched" class="text-danger">
+            L'armoire est requise.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="form-group">
+          <label>Description <span class="text-danger">*</span></label>
+          <textarea formControlName="description" class="form-control" rows="5" placeholder="Description"></textarea>
+          <div *ngIf="updateForm.controls['description'].invalid && updateForm.controls['description'].touched" class="text-danger">
+            La description est requise.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary btn-block" [disabled]="updateForm.invalid">Enregistrer</button>
+      <button type="button" class="btn btn-secondary" (click)="onCancel()">Annuler</button>
+    </div>
+  </div>
+</form>

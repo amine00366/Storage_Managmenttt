@@ -1,0 +1,298 @@
+
+<app-header></app-header>
+<body class="indextwo">
+  <div class="main-wrapper headertwo">
+            <!-- <div class="main-wrapper">
+
+
+              <div class="breadcrumb-bar">
+                  <div class="container-fluid">
+                  <div class="row align-items-center">
+                  <div class="col-md-12 col-12">
+                  <nav aria-label="breadcrumb" class="page-breadcrumb">
+                  <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">collocations</li>
+                  </ol>
+                  </nav>
+                  <h2 class="breadcrumb-title">collocations</h2>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  
+                  
+                  <div class="content">
+                  <div class="container">
+                  <div class="row">
+                   <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
+                  <div class="profile-sidebar">
+                  <div class="widget-profile pro-widget-content">
+                  <div class="profile-info-widget">
+                  <a href="#" class="booking-pro-img">
+                  <img src="assets/img/student/student-01.jpg" alt="User Image">
+                  </a>
+                  <div class="profile-det-info">
+                  <h3>Richard Wilson</h3>
+                  <div class="customer-details">
+                  <h5><i class="fas fa-birthday-cake"></i> 24 Jul 1983, 38 years</h5>
+                  <h5 class="mb-0"><i class="fas fa-map-marker-alt"></i> Newyork, USA</h5>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  <div class="dashboard-widget">
+                  <nav class="dashboard-menu">
+                  <ul>
+                  <li>
+                  <a href="customer-dashboard.html">
+                  <i class="fas fa-columns"></i>
+                  <span>Dashboard</span>
+                  </a>
+                  </li>
+                  <li class="active">
+                  <a href="favourites.html">
+                  <i class="fas fa-bookmark"></i>
+                  <span>Favourites</span>
+                  </a>
+                  </li>
+                  <li>
+                  <a href="chat.html">
+                  <i class="fas fa-comments"></i>
+                  <span>Message</span>
+                  <small class="unread-msg">23</small>
+                  </a>
+                  </li>
+                  <li>
+                  <a href="profile-settings.html">
+                  <i class="fas fa-user-cog"></i>
+                  <span>Profile Settings</span>
+                  </a>
+                  </li>
+                  <li>
+                  <a href="change-password.html">
+                  <i class="fas fa-lock"></i>
+                  <span>Change Password</span>
+                  </a>
+                  </li>
+                  <li>
+                  <a href="index.html">
+                  <i class="fas fa-sign-out-alt"></i>
+                  <span>Logout</span>
+                  </a>
+                  </li>
+                  </ul>
+                  </nav>
+                  </div>
+                  </div>
+                  </div> 
+                 
+                   <div class="col-md-7 col-lg-8 col-xl-9">
+                  <div class="row row-grid">
+   
+
+            <form (ngSubmit)="onSubmit()" class="card">
+              <div class="card-body">
+                <h4 class="card-title">Ajouter une collocation !</h4>
+                <div class="form-group">
+                  <label>Description <span class="text-danger">*</span></label>
+                  <textarea name="description" [(ngModel)]="description" class="form-control" rows="4" placeholder="Description"></textarea>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Price <span class="text-danger">*</span></label>
+                      <input type="number" name="price" [(ngModel)]="price" class="form-control" placeholder="Price">
+                    </div>
+                  </div>
+                  <div class="col-md-6 upload-img">
+                    <div class="change-photo-btn">
+                      <span><i class="fa fa-upload"></i> Upload Photo</span>
+                      <input type="file" class="upload" (change)="onFileSelected($event)">
+                    </div>
+                    <small class="form-text text-muted">Allowed JPG, GIF or PNG. Max size of 2MB</small>
+                  </div>
+                </div>
+                
+                <div class="map-container">
+                   <div class="map" id="map"></div> 
+                  <input type="text" name="latitude" [(ngModel)]="latitude" class="latitude-field" hidden>
+                  <input type="text" name="longitude" [(ngModel)]="longitude" class="longitude-field" hidden>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Add Collocation</button>
+              </div>
+            </form>
+            
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div> -->
+            
+
+
+
+            
+
+            <div class="main-wrapper">
+
+
+                  
+                  <div class="content">
+                  <div class="container">
+                  <div class="row">
+                   <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
+                  <div class="profile-sidebar">
+                  <div class="widget-profile pro-widget-content">
+                  <div class="profile-info-widget">
+                  <a href="#" class="booking-pro-img">
+                  <img src="assets/img/student/student-01.jpg" alt="User Image">
+                  </a>
+                  <div class="profile-det-info">
+                  <h3>Richard Wilson</h3>
+                  <div class="customer-details">
+                  <h5><i class="fas fa-birthday-cake"></i> 24 Jul 1983, 38 years</h5>
+                  <h5 class="mb-0"><i class="fas fa-map-marker-alt"></i> Newyork, USA</h5>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  <div class="dashboard-widget">
+                  <nav class="dashboard-menu">
+                  <ul>
+                  <li>
+                  <a href="customer-dashboard.html">
+                  <i class="fas fa-columns"></i>
+                  <span>Dashboard</span>
+                  </a>
+                  </li>
+                  <li class="active">
+                  <a href="favourites.html">
+                  <i class="fas fa-bookmark"></i>
+                  <span>Favourites</span>
+                  </a>
+                  </li>
+                  <li>
+                  <a href="chat.html">
+                  <i class="fas fa-comments"></i>
+                  <span>Message</span>
+                  <small class="unread-msg">23</small>
+                  </a>
+                  </li>
+                  <li>
+                  <a href="profile-settings.html">
+                  <i class="fas fa-user-cog"></i>
+                  <span>Profile Settings</span>
+                  </a>
+                  </li>
+                  <li>
+                  <a href="change-password.html">
+                  <i class="fas fa-lock"></i>
+                  <span>Change Password</span>
+                  </a>
+                  </li>
+                  <li>
+                  <a href="index.html">
+                  <i class="fas fa-sign-out-alt"></i>
+                  <span>Logout</span>
+                  </a>
+                  </li>
+                  </ul>
+                  </nav>
+                  </div>
+                  </div>
+                  </div> 
+                 
+                   <div class="col-md-7 col-lg-8 col-xl-9">
+                  <div class="row row-grid">
+   
+
+            <!-- <form  class="card">
+              <div class="card-body">
+                <h4 class="card-title">Ajouter une Armoire !</h4>
+                <div class="form-group">
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                          <label>Nom <span class="text-danger">*</span></label>
+                          <input type="text" name="price" id="price"  class="form-control" placeholder="Nom">                    </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="form-group form-focus">
+                          <select class="form-control floating" required>
+                            <option value="" disabled selected>Choisissez l'emplacement</option>
+                            <option value="admin">El Chargia</option>
+                            <option value="utilisateur">El Fejja</option>
+                          </select>
+                        </div>
+                      </div>
+                  <label>Description <span class="text-danger">*</span></label>
+                  <textarea id="description" name="description"  class="form-control" rows="10" placeholder="Description"></textarea>
+                </div>
+                <div class="row">
+                 
+                
+                </div>
+              
+             
+                <button type="submit" class="btn btn-primary btn-block">Ajouter Armoire</button>
+              </div>
+            </form> -->
+            
+
+            <form [formGroup]="armoireForm" (ngSubmit)="onSubmit()" class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Ajouter une Armoire !</h4>
+                  
+                  <div class="form-group">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Nom <span class="text-danger">*</span></label>
+                        <input type="text" formControlName="nomArmoire" class="form-control" placeholder="Nom" />
+                        <div *ngIf="armoireForm.controls['nomArmoire'].invalid && armoireForm.controls['nomArmoire'].touched" class="text-danger">
+                          Le nom est requis.
+                        </div>
+                      </div>
+                    </div>
+              
+                    <div class="col-md-6">
+                      <div class="form-group form-focus">
+                        <label>Emplacement <span class="text-danger">*</span></label>
+                        <select formControlName="emplacement" class="form-control">
+                          <option value="" disabled>Choisissez l'emplacement</option>
+                          <option value="Chargia">Chargia</option>
+                          <option value="el_Fejja">el_Fejja</option>
+                        </select>
+                        <div *ngIf="armoireForm.controls['emplacement'].invalid && armoireForm.controls['emplacement'].touched" class="text-danger">
+                          L'emplacement est requis.
+                        </div>
+                      </div>
+                    </div>
+              
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label>Description <span class="text-danger">*</span></label>
+                        <textarea formControlName="description" class="form-control" rows="5" placeholder="Description"></textarea>
+                        <div *ngIf="armoireForm.controls['description'].invalid && armoireForm.controls['description'].touched" class="text-danger">
+                          La description est requise.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              
+                  <button type="submit" class="btn btn-primary btn-block" [disabled]="armoireForm.invalid">Ajouter Armoire</button>
+                </div>
+              </form>
+              
+
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            
+
+            <app-footer></app-footer>
